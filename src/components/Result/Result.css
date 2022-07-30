@@ -1,0 +1,12 @@
+.result-page {
+  flex: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  padding: 0 5em 0 5em;
+  margin-top: 5em;
+}

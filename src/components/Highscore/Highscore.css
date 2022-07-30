@@ -1,0 +1,23 @@
+.highscore-page {
+  flex: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.card {
+  background-color: #ebdef0;
+  padding: 4em 0 4em 0;
+  width: 70%;
+}
+
+.btn-holder {
+  display: flex;
+}
+
+.btn-cont {
+  flex: 1;
+}

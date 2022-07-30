@@ -1,0 +1,25 @@
+.landing-page {
+  flex: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.card {
+  background-color: #ebdef0;
+  padding: 4em 0 4em 0;
+}
+
+.card-title {
+  text-decoration-line: none;
+}
+
+.button {
+  margin-top: "5em";
+  padding: " 0.5em 2em 0.5em 2em";
+  font-weight: "bold";
+  background-color: #a3e4d7;
+}

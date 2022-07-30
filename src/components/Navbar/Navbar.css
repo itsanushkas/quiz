@@ -1,0 +1,48 @@
+.navbar{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #C39BD3 ;
+    padding: 1em 2.5em 1em 2.5em;
+}
+.navbar h3{
+    color: aliceblue;
+}
+
+.navbar h4{
+    color: aliceblue;
+}
+.logo-cont{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo{
+    color: white;
+    text-decoration: none;
+}
+
+.logo:hover{
+    color: white;
+}
+
+.highscore-cont{
+    color: inherit;
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.score:hover{
+    background-color: blueviolet;
+}
+.score.active{
+    background-color:#C39BD3;
+}
+
+
