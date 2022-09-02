@@ -7,6 +7,7 @@ import image from "../Image/bg.jpg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useCallback } from "react";
 
 const Quiz = ({ setScore }) => {
   const navigate = useNavigate();
@@ -17,6 +18,16 @@ const Quiz = ({ setScore }) => {
   const [clicked, setClicked] = useState(false);
   const [corretAnswerCount, setCorretAnswerCount] = useState(0);
 
+  const finishQuiz = useCallback(() => {
+    setScore(seconds * corretAnswerCount);
+    navigate("result");
+  }, [setScore, seconds, corretAnswerCount, navigate]);
+
+  // const finishQuiz = () => {
+  //   setScore(seconds * corretAnswerCount);
+  //   navigate("result");
+  // };
+
   useEffect(() => {
     if (seconds <= 0) {
       finishQuiz();
@@ -25,7 +36,7 @@ const Quiz = ({ setScore }) => {
     const timer =
       seconds > 0 && setInterval(() => setSeconds(seconds - 1), 1000);
     return () => clearInterval(timer);
-  }, [seconds]);
+  }, [seconds, finishQuiz]);
 
   const next = () => {
     setClicked(false);
@@ -35,11 +46,6 @@ const Quiz = ({ setScore }) => {
     } else {
       setQuesNo(quesNo + 1);
     }
-  };
-
-  const finishQuiz = () => {
-    setScore(seconds * corretAnswerCount);
-    navigate("result");
   };
 
   return (
